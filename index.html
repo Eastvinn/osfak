@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Buat Mentor Funny K-37 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- background ambience: floating petals get injected here by JS -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <main class="scene">
+
+    <!-- SCREEN 1 — Envelope -->
+    <section class="screen is-active" data-screen="envelope">
+      <div class="card envelope-card">
+        <div class="seal">🌸</div>
+        <p class="eyebrow">sebuah pesan kecil</p>
+        <h1 class="script-title">Untuk <span id="recipientSlot">Mentor funny K-37 </span></h1>
+        <p class="body-text">Ada sesuatu yang pengen gue kasih tau. Sebelum itu, boleh buka amplopnya dulu?</p>
+        <button class="btn-primary" id="btnOpen" type="button">Buka Amplop</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2 — Passcode lock -->
+    <section class="screen" data-screen="lock">
+      <div class="card lock-card" id="lockCard">
+        <div class="lock-icon" id="lockIcon">🔒</div>
+        <p class="hint" id="hintText">hayo, kode rahasianya apa? 👀</p>
+        <div class="dots" id="dots"></div>
+        <div class="keypad" id="keypad"></div>
+        <p class="hint-toggle" id="hintToggle">butuh petunjuk?</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 3 — Whisper cards (bisik-bisik) -->
+    <section class="screen" data-screen="whisper">
+      <div class="card whisper-card">
+        <p class="eyebrow" id="whisperProgress">bisik-bisik 1/5</p>
+        <p class="whisper-text" id="whisperText">…</p>
+        <button class="btn-primary" id="btnNextWhisper" type="button">Lanjut</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 4 — Final letter -->
+    <section class="screen" data-screen="letter">
+      <div class="card letter-card">
+        <p class="eyebrow" id="fromLabel">dari Maba funny</p>
+        <h2 class="script-title" id="letterTitle">Ini yang sebenarnya</h2>
+        <div class="letter-body" id="letterBody"></div>
+        <button class="btn-primary" id="btnFinish" type="button">Selesai</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 5 — Closing -->
+    <section class="screen" data-screen="closing">
+      <div class="card closing-card">
+        <div class="closing-icon">💙</div>
+        <p class="body-text" id="closingText">Makasih ting udah baca sampai sini.</p>
+        <button class="btn-ghost" id="btnRestart" type="button">Buka lagi dari awal</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
